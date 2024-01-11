@@ -14,7 +14,6 @@ SHEET = GSPREAD_CLIENT.open('survey-result')
 
 
 
-
 def get_survey_data():
     """
     Get survey data input from user and update the Google Sheets spreadsheet.
@@ -38,6 +37,7 @@ def get_survey_data():
     return NAME, AGE, GENDER, RATING
 
 
+
 def update_sheet(name, age, gender, rating):
     """
     Update the Google Sheets spreadsheet with survey data.
@@ -51,6 +51,45 @@ def update_sheet(name, age, gender, rating):
     
     print(f"Your name is: {name}, Your gender is: {gender}, Your age is: {age}, Your rating is: {rating}")
     print("Survey data appended to the spreadsheet.")
+
+
+def calculate_average_rating():
+    """
+    Calculate the average rating of all survey participants.
+    """
+    sheet = SHEET.get_worksheet(0)
+    ratings = sheet.col_values(4)[1:] 
+    
+    # Filter out non-numeric values and empty strings from ratings
+    valid_ratings = [int(rating) for rating in ratings if rating.isdigit()]
+    
+    if not valid_ratings:
+        return 0  # No valid ratings
+    
+    average_rating = sum(valid_ratings) / len(valid_ratings)
+    return average_rating
+
+def calculate_gender_counts():
+    """
+    Calculate the counts of participants by gender.
+    """
+    sheet = SHEET.get_worksheet(0)
+    genders = sheet.col_values(3)[1:] 
+    gender_counts = {gender: genders.count(gender) for gender in set(genders)}
+    return gender_counts
+
+def main():
+    name, age, gender, rating = get_survey_data()
+    update_sheet(name, age, gender, rating)
+
+    avg_rating = calculate_average_rating()
+    print(f"Average Rating of all participants: {avg_rating}")
+
+    gender_counts = calculate_gender_counts()
+    print("Participant Counts by Gender:")
+    for gender, count in gender_counts.items():
+        print(f"{gender}: {count}")
+
 
 if __name__ == "__main__":
     main()  
