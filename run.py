@@ -18,6 +18,7 @@ def get_survey_data():
     """
     Get survey data input from user and update the Google Sheets spreadsheet.
     """
+    print("Welcome to the online survey please follow the prompt to enter your name, gender, and rating")
     print("Please enter your Name")
     NAME = str.capitalize(input("Name:\n "))
     print("Please enter your Age")
