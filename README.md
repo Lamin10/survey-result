@@ -8,19 +8,19 @@ The Python script facilitates the collection, analysis, and storage of survey da
 ### Getting Survey Data:
 The get_survey_data() function collects user input for survey details, including Name, Age, Gender, and Rating. It ensures that the entered Rating is not greater than 5 through input validation. If an invalid Rating is provided, the script will prompt the user to input a valid one.
 
-![User input](/images/user-input.jpg)
+![User input](/images/user-input.png)
 
 
 ### Updating Spreadsheet:
 The update_sheet(name, age, gender, rating) function interacts with the Google Sheets API to append the collected survey data to a specified spreadsheet. It also provides feedback to the user about the appended data.
 
-![Google sheet](/images/google-sheets.jpg)
+![Google sheet](/images/google-sheets.png)
 
 
 ### Calculating Average Rating:
 The calculate_average_rating() function computes the average rating of all survey participants. It retrieves the ratings from the spreadsheet, filters out non-numeric values, and calculates the average using valid ratings.
 
-![Average rating](/images/average.jpg)
+![Average rating](/images/average.png)
 
 
 ### Calculating Gender Counts:
