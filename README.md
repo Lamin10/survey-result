@@ -43,16 +43,16 @@ and displays those counts.
 
 + Execute the script survey_result  using the command: python3 run.py
 + Follow the prompts to input survey data: Name, Age, Gender, and Rating.
-+The script will update the Google Sheets spreadsheet with the entered data and provide feedback on successful update.
++ The script will update the Google Sheets spreadsheet with the entered data and provide feedback on successful update.
 
 ### View Analysis:
 
 + The script will calculate and display the average rating of participants.
- +It will also show participant counts by gender.
++ It will also show participant counts by gender.
 
 ### Deployment to Heroku
 
-+The application was deployed to Heroku with the following steps
++ The application was deployed to Heroku with the following steps
 + Downloading requirements.txt dependancies for deployment, git add commit and push them to Githup main branch
 + Inside Heroku clicked on the create Heroku app button, and give our application a unique name "survey-result"
 + and choosed Europe as a region, and clicked create app once again
@@ -61,16 +61,16 @@ and displays those counts.
 + Created another convig vars and named the value to "PORT" and in the value field added "8000"
 
 ## Added our buildpack
-+Buildpacs are scripts that are run when your app is deployed, they are used to install dependency for your app and configure your environment.
-+Buildpacs added are python and nodejs
++ Buildpacs are scripts that are run when your app is deployed, they are used to install dependency for your app and configure your environment.
++ Buildpacs added are python and nodejs
 
 ## Connecting our Heroku to Github
-+Navigated to the deploy section in Heroku and connected to Github, seached for our Github repository name for deployment and connected it.
++ Navigated to the deploy section in Heroku and connected to Github, seached for our Github repository name for deployment and connected it.
 ## Deployment method
 +Deployed our app manually instead of automatic deployment
 
 ## Errors during deployment 
-+The errors encounterd during deployment was duse to unneeded dependencies in the requirements.txt file and the error was rectified by
-+deleting all the unneeded list of dependencies and redoploying our app again successfully.
++ The errors encounterd during deployment was duse to unneeded dependencies in the requirements.txt file and the error was rectified by
++ deleting all the unneeded list of dependencies and redoploying our app again successfully.
 
 ![Deployment errors](/images/deploynent-errors.png)
