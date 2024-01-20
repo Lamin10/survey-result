@@ -42,13 +42,13 @@ and displays those counts.
   which run the Script.
 
 + Execute the script survey_result  using the command: python3 run.py
-  Follow the prompts to input survey data: Name, Age, Gender, and Rating.
-  The script will update the Google Sheets spreadsheet with the entered data and provide feedback on successful update.
++ Follow the prompts to input survey data: Name, Age, Gender, and Rating.
++The script will update the Google Sheets spreadsheet with the entered data and provide feedback on successful update.
 
 ### View Analysis:
 
 + The script will calculate and display the average rating of participants.
- It will also show participant counts by gender.
+ +It will also show participant counts by gender.
 
 ### Deployment to Heroku
 
@@ -65,9 +65,9 @@ and displays those counts.
 +Buildpacs added are python and nodejs
 
 ## Connecting our Heroku to Github
-Navigated to the deploy section in Heroku and connected to Github, seached for our Github repository name for deployment and connected it.
-##Deployment method
-Deployed our app manually instead of authmatic deployment
++Navigated to the deploy section in Heroku and connected to Github, seached for our Github repository name for deployment and connected it.
+## Deployment method
++Deployed our app manually instead of automatic deployment
 
 ## Errors during deployment 
 +The errors encounterd during deployment was duse to unneeded dependencies in the requirements.txt file and the error was rectified by
