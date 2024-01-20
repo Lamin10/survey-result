@@ -61,16 +61,16 @@ and displays those counts.
 + Created another convig vars and named the value to "PORT" and in the value field added "8000"
 
 ## Added our buildpack
-Buildpacs are scripts that are run when your app is deployed, they are used to install dependency for your app and configure your environment.
++Buildpacs are scripts that are run when your app is deployed, they are used to install dependency for your app and configure your environment.
 +Buildpacs added are python and nodejs
 
-##Connecting our Heroku to Github
+## Connecting our Heroku to Github
 Navigated to the deploy section in Heroku and connected to Github, seached for our Github repository name for deployment and connected it.
 ##Deployment method
 Deployed our app manually instead of authmatic deployment
 
-##Errors during deployment 
-The errors encounterd during deployment was duse to unneeded dependencies in the requirements.txt file and the error was rectified by
-deleting all the unneeded list of dependencies and redoploying our app again successfully.
+## Errors during deployment 
++The errors encounterd during deployment was duse to unneeded dependencies in the requirements.txt file and the error was rectified by
++deleting all the unneeded list of dependencies and redoploying our app again successfully.
 
 ![Deployment errors](/images/deploynent-errors.png)
