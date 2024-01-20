@@ -1,37 +1,43 @@
 ![Online survey](/images/online-survey.png)
 # Python Survey-result Data Management Script
 
-The Python script facilitates the collection, analysis, and storage of survey data in a Google Sheets spreadsheet. This script integrates the Google Sheets API to access and manipulate data. The primary functionalities of the script include:
++ The Python script facilitates the collection, analysis, and storage of survey data in a Google Sheets spreadsheet. This script integrates the Google Sheets API to access and 
+  manipulate data.
+
+## The primary functionalities of the script include:
 
 ## Features
 
 ### Getting Survey Data:
-The get_survey_data() function collects user input for survey details, including Name, Age, Gender, and Rating. It ensures that the entered Rating is not greater than 5 through input validation. If an invalid Rating is provided, the script will prompt the user to input a valid one.
++ The get_survey_data() function collects user input for survey details, including Name, Age, Gender, and Rating. It ensures that the entered Rating is not greater than 5 through 
+  input validation. If an invalid Rating is provided, the script will prompt the user to input a valid one.
 
 ![User input](/images/user-input.png)
 
 
 ### Updating Spreadsheet:
-The update_sheet(name, age, gender, rating) function interacts with the Google Sheets API to append the collected survey data to a specified spreadsheet. It also provides feedback to the user about the appended data.
++ The update_sheet(name, age, gender, rating) function interacts with the Google Sheets API to append the collected survey data to a specified spreadsheet. It also provides 
+  feedback to the user about the appended data.
 
 ![Google sheet](/images/google-sheets.png)
 
 
 ### Calculating Average Rating:
-The calculate_average_rating() function computes the average rating of all survey participants. It retrieves the ratings from the spreadsheet, filters out non-numeric values, and calculates the average using valid ratings.
++ The calculate_average_rating() function computes the average rating of all survey participants. It retrieves the ratings from the spreadsheet, filters out non-numeric values, 
+  and calculates the average using valid ratings.
 
 ![Average rating](/images/average.png)
 
 
 ### Calculating Gender Counts:
-The calculate_gender_counts() function calculates the number of participants by gender. It analyzes the gender data from the 
-spreadsheet, counts the occurrences of each gender, and presents the results.
++ The calculate_gender_counts() function calculates the number of participants by gender. It analyzes the gender data from the 
+  spreadsheet, counts the occurrences of each gender, and presents the results.
 
 ### Main Function:
-The main() function orchestrates the execution of the script. It calls the get_survey_data() function to gather input, then invokes 
-the update_sheet() function to store the survey data in the spreadsheet. Subsequently, it calculates the average rating using 
-calculate_average_rating() and displays it. Lastly, it calculates the participant counts by gender using calculate_gender_counts() 
-and displays those counts.
++ The main() function orchestrates the execution of the script. It calls the get_survey_data() function to gather input, then invokes 
++ the update_sheet() function to store the survey data in the spreadsheet. Subsequently, it calculates the average rating using 
++ calculate_average_rating() and displays it. Lastly, it calculates the participant counts by gender using calculate_gender_counts() 
+  and displays those counts.
 
 ## packages installed
 
@@ -67,7 +73,7 @@ and displays those counts.
 ## Connecting our Heroku to Github
 + Navigated to the deploy section in Heroku and connected to Github, seached for our Github repository name for deployment and connected it.
 ## Deployment method
-+Deployed our app manually instead of automatic deployment
++ Deployed our app manually instead of automatic deployment
 
 ## Errors during deployment 
 + The errors encounterd during deployment was duse to unneeded dependencies in the requirements.txt file and the error was rectified by
