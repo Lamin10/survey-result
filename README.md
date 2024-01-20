@@ -1,4 +1,4 @@
-
+![Online survey](/images/online-survey.png)
 # Python Survey-result Data Management Script
 
 The Python script facilitates the collection, analysis, and storage of survey data in a Google Sheets spreadsheet. This script integrates the Google Sheets API to access and manipulate data. The primary functionalities of the script include:
@@ -33,7 +33,7 @@ the update_sheet() function to store the survey data in the spreadsheet. Subsequ
 calculate_average_rating() and displays it. Lastly, it calculates the participant counts by gender using calculate_gender_counts() 
 and displays those counts.
 
-## packages installed:
+## packages installed
 
 + Installed gspread and google-auth using the command: pip install gspread google-auth
   Set Up Credentials:
@@ -49,3 +49,28 @@ and displays those counts.
 
 + The script will calculate and display the average rating of participants.
  It will also show participant counts by gender.
+
+### Deployment to Heroku
+
++The application was deployed to Heroku with the following steps
++ Downloading requirements.txt dependancies for deployment, git add commit and push them to Githup main branch
++ Inside Heroku clicked on the create Heroku app button, and give our application a unique name "survey-result"
++ and choosed Europe as a region, and clicked create app once again
++ Navigated to the Heroku setting tab and created our config vars, named our key to "CREDS" and pasted inside the value copy of our creds.jason file
++ which is hidden in our .gitignore file
++ Created another convig vars and named the value to "PORT" and in the value field added "8000"
+
+## Added our buildpack
+Buildpacs are scripts that are run when your app is deployed, they are used to install dependency for your app and configure your environment.
++Buildpacs added are python and nodejs
+
+##Connecting our Heroku to Github
+Navigated to the deploy section in Heroku and connected to Github, seached for our Github repository name for deployment and connected it.
+##Deployment method
+Deployed our app manually instead of authmatic deployment
+
+##Errors during deployment 
+The errors encounterd during deployment was duse to unneeded dependencies in the requirements.txt file and the error was rectified by
+deleting all the unneeded list of dependencies and redoploying our app again successfully.
+
+![Deployment errors](/images/deploynent-errors.png)
